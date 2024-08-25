@@ -4,7 +4,7 @@
 
 
 /**
- * copyright 2022 @codewithsadee
+ * copyright 2024 @rahulkkothari
  */
 
 
@@ -383,8 +383,6 @@ main {
 
 .info_more-btn:hover::before,
 .info_more-btn:focus::before { background: var(--bg-gradient-yellow-2); }
-
-.info_more-btn span { display: none; }
 
 .sidebar-info_more {
   opacity: 0;
@@ -1871,12 +1869,52 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .social-list { justify-content: center; }
 
-
-
   /**
 	 * RESUME
 	 */
 
   .timeline-text { max-width: 700px; }
 
+}
+
+/* Custom Bullet Points for Ordered Lists */
+ol.custom-bullets li {
+  position: relative;
+  padding-left: 25px; /* Space between number and text */
+}
+
+ol.custom-bullets li::before {
+  content: "➤"; /* Custom number and dot */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--orange-yellow-crayola); /* Number color */
+}
+/* Floating Download Button Styles */
+.floating-button {
+  position: fixed;
+  bottom: 9%;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: var(--orange-yellow-crayola);
+  color: var(--smoky-black);
+  font-size: 16px;
+  font-weight: var(--fw-500);
+  border: none;
+  border-radius: 30px;
+  box-shadow: var(--shadow-2);
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color var(--transition-1);
+}
+
+.floating-button:hover {
+  background-color: var(--vegas-gold);
+}
+
+.floating-button ion-icon {
+  font-size: 20px;
 }
